@@ -1,0 +1,154 @@
+/*# include<iostream>
+using namespace std;
+
+void printname(string name){
+    cout << "hello "<< name << endl;
+
+}
+int main() {
+  int x;
+    cin >> x;
+    cout << "Value of x: " << (x*2+2);
+    return 0;
+    string name;
+    cin >> name;
+    printname(name);
+    return 0;
+}*/
+
+//switch
+
+/*#include <iostream>
+using namespace std;
+
+int main() {
+    int day = 4;
+
+    switch (day) {
+        case 1:
+            cout << "Mon";
+            break;
+        case 2:
+            cout << "Tues";
+            break;
+        case 3:
+            cout << "Wed";
+            break;
+        case 4:
+            cout << "Thur";
+            break;
+        case 5:
+            cout << "Fri";
+            break;
+        case 6:
+            cout << "Sat";
+            break;
+        case 7:
+            cout << "Sun";
+            break;
+        default:
+            cout << "Invalid";
+    }
+
+    return 0;
+}*/
+
+
+//star pattern
+#include<iostream>
+using namespace std;
+
+/*void pattern2(int N)
+{
+    
+    for (int i = 0; i < N; i++)
+    {
+       
+        for (int j = 0; j <=i; j++)
+        {
+            cout << "* ";
+        }
+       
+        cout << endl;
+    }
+}
+void pattern7(int N)
+{
+    
+    for (int i = 0; i < N; i++)
+    {
+        
+        for (int j =0; j<N-i-1; j++)
+        {
+            cout <<" ";
+        }
+       
+        
+        for(int j=0;j< 2*i+1;j++){
+            
+            cout<<"*";
+        }
+        
+        
+         for (int j =0; j<N-i-1; j++)
+        {
+            cout <<" ";
+        }
+        
+        
+        cout << endl;
+    }
+}
+
+
+
+int main()
+{   
+    
+    int N = 5;
+
+    
+    pattern7(N);
+
+    return 0;
+}*/
+
+
+//palindrome checking
+bool palindrome(int n)
+{
+    
+    int revNum = 0;
+    
+    int dup = n;
+    
+    while (n > 0) {
+        
+        int ld = n % 10;
+        
+        revNum = (revNum * 10) + ld;
+       
+        n = n / 10;
+    }
+   
+    if (dup == revNum) {
+       
+        return true;
+    } else {
+        
+        return false;
+    }
+}
+
+
+int main() {
+    int number = 4554;
+
+    if (palindrome(number)) {
+        cout << number << " is a palindrome." << endl;
+    } else {
+        cout << number << " is not a palindrome." << endl;
+    }
+
+    return 0;
+}
